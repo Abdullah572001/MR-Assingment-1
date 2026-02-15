@@ -1,3 +1,14 @@
 *{
     font-family: "Google Sans Flex", sans-serif;
 }
+
+.bg-img {
+    background-image: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.5)),
+        url("../Assets/banner-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
