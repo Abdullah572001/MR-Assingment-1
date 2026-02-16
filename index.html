@@ -45,11 +45,11 @@
           </div>
 
           <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-blue-600 font-semibold">
-              <li><a>Home</a></li>
-              <li><a>Products</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
+            <ul class="menu menu-horizontal px-1 text-gray-500 font-semibold">
+              <li class="text-blue-600 page-btn hover:bg-blue-600 hover:text-gray-200"><a>Home</a></li>
+              <li id="product-btn" onclick="removeActiveFromPage('product-btn')" class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>Products</a></li>
+              <li class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>About</a></li>
+              <li class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>Contact</a></li>
             </ul>
           </div>
 
@@ -82,18 +82,22 @@
               </div>
               <ul
                 tabindex="-1"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-blue-600 font-semibold"
+                class=" text-gray-500 menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-blue-600 font-semibold"
               >
-                <li><a>Home</a></li>
-                <li><a>Products</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
+                <li class="page-btn text-blue-600 hover:bg-blue-600 hover:text-gray-200"><a>Home</a></li>
+                <li id="product-btn-2" onclick="loadAllCategories('product-btn-2')" class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>Products</a></li>
+                <li class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>About</a></li>
+                <li class="page-btn hover:bg-blue-600 hover:text-gray-200"><a>Contact</a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
 
+      
+    </header>
+
+    <main id="main">
       <!-- banner section -->
       <section class="bg-img">
         <div
@@ -108,9 +112,7 @@
           <button class="btn btn-primary">Shop Now</button>
         </div>
       </section>
-    </header>
 
-    <main>
       <!-- why choose us section -->
       <section class="bg-gray-100 py-28">
         <div class="w-11/12 lg:w-10/12 mx-auto">
@@ -199,6 +201,19 @@
        </section>
     </main>
 
+    <main id="main-2" class="w-11/12 lg:w-10/12 mx-auto py-10 space-y-7 hidden">
+      <h2 class="text-3xl font-bold text-center">Our Products</h2>
+
+      <!-- categories container -->
+       <div id="category-container" class="flex flex-wrap items-center gap-4 justify-center">
+        <button id="all-btn" onclick="loadAllProducts()" class="category-btn btn rounded-3xl bg-blue-600 text-gray-300">All</button>
+       </div>
+
+
+        <!-- products container -->
+         <section id="products-container" class="grid grid-cols-1 lg:grid-cols-3 gap-6"></section>
+    </main>
+
     <footer class="bg-blue-950">
       <div class="w-11/12 lg:w-10/12 mx-auto py-16 text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 space-y-4">
@@ -256,6 +271,8 @@
     </footer>
 
     <!-- script -->
+     <script src="./JS/utility.js"></script>
      <script src="./JS/index.js"></script>
+     <script src="./JS/category.js"></script>
   </body>
 </html>

@@ -55,11 +55,14 @@ const loadTrendingProducts = (products) => {
 
 // load all products
 const loadAllProducts = async () => {
+    removeActiveFromCategory();
+    document.getElementById('all-btn').classList.add('bg-blue-600', 'text-white');
   try {
     const res = await fetch("https://fakestoreapi.com/products");
     const data = await res.json();
     // console.log(data)
     loadTrendingProducts(data);
+    showProductsByCategory(data);
   } catch (error) {
     console.error("API থেকে কোন ত্রুটি হয়েছে:", error);
   }
