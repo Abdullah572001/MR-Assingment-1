@@ -109,6 +109,7 @@ const loadTrendingProducts = (products) => {
 
 // load all products
 const loadAllProducts = async () => {
+    loader(true);
   removeActiveFromCategory();
   document.getElementById("all-btn").classList.add("bg-blue-600", "text-white");
   try {
@@ -120,6 +121,9 @@ const loadAllProducts = async () => {
   } catch (error) {
     console.error("API থেকে কোন ত্রুটি হয়েছে:", error);
   }
+    finally{
+        loader(false);
+    }
 };
 
 loadAllProducts();

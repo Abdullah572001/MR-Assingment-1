@@ -45,6 +45,7 @@ const showProductsByCategory = (products) => {
 
 // load products by category
 const loadProductsByCategory = async (category, btnId) => {
+    loader(true);
     removeActiveFromCategory();
     document.getElementById(btnId).classList.add('bg-blue-600', 'text-white');
     try{
@@ -56,6 +57,9 @@ const loadProductsByCategory = async (category, btnId) => {
     }
     catch(error){
         console.log("API থেকে কোন ত্রুটি হয়েছে:", error);
+    }
+    finally{
+        loader(false);
     }
 }
 

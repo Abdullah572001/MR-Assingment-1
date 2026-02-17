@@ -31,3 +31,15 @@ const removeActiveFromCategory = () => {
         btn.classList.add('text-gray-500');
     })
 }
+
+// loader adding and removing
+const loader = Boolean =>{
+    const loaderSection = document.getElementById('loader');
+    if(Boolean){
+        loaderSection.classList.remove('hidden');
+        document.getElementById('products-container').classList.add('hidden');
+    } else {
+        loaderSection.classList.add('hidden');
+        document.getElementById('products-container').classList.remove('hidden');
+    }
+}
