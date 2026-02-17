@@ -34,7 +34,7 @@ const showProductsByCategory = (products) => {
         <h2 class="text-xl font-bold">$${price}</h2>
 
         <div class="flex items-center justify-between mt-5">
-            <button class="btn w-2/5 text-gray-500 hover:bg-blue-900 hover:text-white"><i class="fa-regular fa-eye"></i> Details</button>
+            <button onclick="loadProductDetails(${product.id})" class="btn w-2/5 text-gray-500 hover:bg-blue-900 hover:text-white"><i class="fa-regular fa-eye"></i> Details</button>
             <button class="btn w-2/5 bg-blue-600 text-gray-200 hover:bg-blue-900 "><i class="fa-solid fa-cart-shopping"></i> Add</button>
         </div>
         </div>

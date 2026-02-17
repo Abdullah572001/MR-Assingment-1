@@ -1,12 +1,25 @@
 
-const removeActiveFromPage = (btnName) => {
-    document.getElementById('main').classList.add('hidden');
-    document.getElementById('main-2').classList.remove('hidden');
-
+const remove = () =>{
     const allPageBtn = document.querySelectorAll('.page-btn');
     allPageBtn.forEach(btn => {
         btn.classList.remove('text-blue-600');
     });
+}
+
+const homeToggle = (btnName) => {
+    document.getElementById('main-2').classList.add('hidden');
+    document.getElementById('main').classList.remove('hidden');
+
+    remove();
+
+    document.getElementById(btnName).classList.add('text-blue-600');
+}
+
+const removeActiveFromPage = (btnName) => {
+    document.getElementById('main').classList.add('hidden');
+    document.getElementById('main-2').classList.remove('hidden');
+
+    remove();
 
     document.getElementById(btnName).classList.add('text-blue-600');
 }
