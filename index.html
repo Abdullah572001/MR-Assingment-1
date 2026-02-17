@@ -105,6 +105,8 @@
                 class="text-gray-500 menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-blue-600 font-semibold"
               >
                 <li
+                id="home-btn-2"
+                onclick="homeToggle('home-btn-2')"
                   class="page-btn text-blue-600 hover:bg-blue-600 hover:text-gray-200"
                 >
                   <a>Home</a>
@@ -141,7 +143,7 @@
             with <br class="hidden md:block" />
             confidence and style at SwiftCart.
           </p>
-          <button class="btn btn-primary">Shop Now</button>
+          <button onclick="removeActiveFromPage('product-btn')" class="btn btn-primary">Shop Now</button>
         </div>
       </section>
 
